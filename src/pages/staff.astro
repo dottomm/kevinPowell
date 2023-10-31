@@ -1,0 +1,74 @@
+---
+import { ViewTransitions, fade } from 'astro:transitions';
+import {slide} from 'astro:transitions';
+import Layout from '../layouts/Layout.astro';
+import { getEntryBySlug } from "astro:content";
+
+import Card from '../components/Card.astro'
+
+const team = await getEntryBySlug("staff", "index");
+const { title, staff, implementation, cdestaff, cde, mission, napabranch, button } = team.data;
+
+---
+
+<Layout title="Pepti Team" >
+   
+ <section id="staff">
+   
+    <main  transition:animate={fade({duration: '1s'})}>
+      <div class="staff-grid">
+        <h1 transition:animate={slide({duration: '0.6s'})}>{title}</h1>
+       
+        <p>{mission}</p>
+        <div > 
+            {
+            button?.enable && (
+              <a class="button" href={button.link}>
+              {button.label}
+              </a>
+            )
+            } 
+        </div>
+        <div>
+            <h2>{napabranch}</h2>
+        </div>
+        {staff?.map((team) => (
+        <article class="staff">
+           <div class="flex">
+                <div transition:animate={fade({duration: '0.2s'})}>
+                    <a href={team.url}> <img src={team.image} alt={team.name} /></a>
+                </div>
+                <div>
+                    <h4 class='name' >{team.name}</h4>
+                    <p class="title">{team.title}</p>
+                </div> 
+            </div> 
+            
+        </article>  
+              ))
+            }
+       <h2> {cde.title}</h2>
+{cdestaff?.map((cdestaff) => ( 
+   
+     <article>
+        <div class="cde">
+       <img src={cdestaff.image} alt={cdestaff.name}/>
+        
+          <h4>{cdestaff.name} </h4>
+         
+          <div class="nameTitle">
+            {cdestaff.title.map((item) => (
+            <div>{item.titlename}</div>
+            ))}
+        </div>
+      </div>
+      </article>
+
+))
+}
+    </main>
+</section>
+
+
+          
+</Layout>

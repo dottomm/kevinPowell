@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { ViewTransitions } from 'astro:transitions';
+import { fade } from 'astro:transitions';
+
+
+import { getEntryBySlug } from "astro:content";
+const entry = await getEntryBySlug("bios", "mcbee");
+const { name, title, photo, bios  } = entry.data;
+
+---
+
+<Layout title="Debbie McBee">
+  <main transition:animate={fade({duration: '0.6s'})}>
+    <section class="coach">
+    
+      <article title={name}>
+        <div class="wrapper" > 
+          <img src={photo}  alt={name} />
+          <h1>{name}</h1>
+          <h3>{title}</h3>
+        
+          {bios?.map((bio) => (  
+            <p>{bio.bio}</p>   
+            ))
+          }
+         </div> 
+      </article>
+   </section>
+  </main>
+</Layout>

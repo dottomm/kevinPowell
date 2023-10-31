@@ -1,0 +1,103 @@
+---
+import {ViewTransitions} from 'astro:transitions';
+import {slide} from 'astro:transitions';
+import { fade } from 'astro:transitions';
+import Layout from '../layouts/Layout.astro';
+import { getEntryBySlug } from "astro:content";
+
+import CTA from '../components/CTAButton.astro'
+
+const homepage = await getEntryBySlug("homepage", "index");
+const { banner, mission, feature, services, ei, primary, workflow, call_to_action } = homepage.data;
+
+---
+
+<Layout title="Partnership for Effective Practices in Transition and Inclusion">
+  <main transition:animate={fade({duration: '0.6s'})}>
+   <section >
+      <div class="wrapper" transition:animate={slide({duration: '0.8s'})}> 
+       
+        <h1>{banner.content}</h1>
+      </div>
+  </section>
+
+<section class="full-width-split-screen" >	
+  <img src="/images/GettyImages-514561326.jpg" alt="" />
+    <div class="secondary" >
+    <p>
+    {mission.content}
+    </p>
+    {
+    banner?.button?.enable && (
+      <a class="button" href={banner.button.link}>
+      {banner.button.label}
+      </a>
+    )
+    }
+    </div>
+</section>
+
+<section class="full-width-split-screen" >
+  <div class="accent">
+    <div > 
+      {
+      ei.button?.enable && (
+        <a class="button" href={ei.button.link}>
+        {ei.button.label}
+        </a>
+      )
+      } 
+  </div>
+    <p>{ei.content}</p>
+  </div>
+  <img src='/images/GettyImages-1483125813.jpg' alt=''>
+</section>
+
+<!--
+  <section class="">
+  <div class="wrapper">
+	<h2>{workflow.title}</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse impedit cupiditate, quisquam reprehenderit rem nostrum quaerat tempore molestias magnam maxime omnis hic enim, autem tempora tenetur illo excepturi eaque fugiat.</p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit officiis dolores vitae sed libero ipsa. Aut, eos accusantium, quas at laborum tempore ab quidem eum exercitationem odit excepturi incidunt iste.</p>
+</section>
+ -->
+
+<!--
+  <section class="full-width-split-screen">
+  <div class="primary">
+	<h3>{workflow.title}</h3>
+    <p>California Department of Education Special Education Division and Early Childhood Division</p>
+    
+  </div>
+  <div class="shout" >
+	<h3>{call_to_action.title}</h3>
+    <p>{call_to_action.content}</p>
+  <p>   {
+      call_to_action?.button?.enable && (
+        <a class="button" href={call_to_action.button.link}>
+        {call_to_action.button.label}
+        </a>
+      )
+      }</p>
+	
+  </div>
+</section>
+ -->
+<!--
+  <section class="">
+  <div class="wrapper">
+    <h2>{ei.title}</h2>
+	<p>{ei.content}</p>
+	</div>
+</section>
+ -->
+
+<section class="full-width-split-screen">
+  <img src="/images/GettyImages-920503140.jpg" alt="" />
+  <img src='/images/GettyImages-985125732.jpg' alt='' />
+</section>
+
+	</main>
+</Layout>
+
