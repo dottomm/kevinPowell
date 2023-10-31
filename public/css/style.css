@@ -101,13 +101,25 @@
   .button:focus {
     background-color: var(--clr-accent);
   }
-  
+  .logoHeader{
+    display: inline;
+  }
+
+  .logoHeader p{
+    margin-top: -1.4em;
+    text-align: center;
+    font-size: 2.4em;
+    font-style: italic;
+    color: #0c4d8f;
+  }
   .wrapper {
-    background-color: var(--clr-babyBlue);
     max-width: var(--wrapper-max-width);
     margin-inline: auto;
     padding-inline: var(--wrapper-padding-inline);
+    display: flex;
+    flex-direction: column;
   }
+
   
   /* remove the padding so images can take up the entire height */
   .full-width-split-screen {
@@ -321,7 +333,13 @@
     justify-content: space-around;;
     padding:10 2%;
     background-color:var(--clr-white);
-    
+}
+.footer-text {
+  padding-left: 2em;
+  padding-right: 2em;
+color:var(--clr-primary);
+display: flex;
+justify-content: space-around;
 }
 
 footer img{

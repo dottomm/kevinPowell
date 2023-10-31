@@ -30,13 +30,13 @@ staff:
   - name: Debbie McBee
     title: Statewide Implementation Coach
     image: '/images/debBee.webp'
-    url: mcbee
+    url: /mcbee
     bio: 
 
   - name: Angelia Ochoa
     title: Statewide Implementation Coach
     image: '/images/ochoa.webp'
-    url: angeliaOchoa
+    url: /angeliaOchoa
     bio: 
 
   - name: Sarah Thompson

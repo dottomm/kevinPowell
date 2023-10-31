@@ -2,28 +2,46 @@
 banner:
   title: PEPTI 
   content: Partnerships for Effective Practices in Transition and Inclusion
+  tagline: One System, All Children - Better Together
   image: /images/AR_Guides_Instruction.jpg
   button:
     label: "Learn More About PEPTI"
     link: "/staff"
     enable: true
 
-#mission statememt 
+#Our Mission
 mission:
-    content: The Partnerships for Effective Practices in Transition and Inclusion (PEPTI) project addresses critical needs in early education transition and inclusion. Our mission is to provide high-quality professional learning opportunities to early intervention and preschool staff on inclusion and transition practices. The project aims to build trusting family partnerships during the early start transition, enhance educator competencies in inclusive practices, and promote statewide adoption and sustainability through interagency collaboration. Our vision is a world where every child, of every ability, has the opportunity to thrive in a supportive and nurturing educational environment. "One System, All Children Better Together"
+    content: The Partnerships for Effective Practices in Transition and Inclusion (PEPTI) project addresses critical needs in early education transition and inclusion. Our mission is to provide high-quality professional learning opportunities to early intervention and preschool staff on inclusion and transition practices and promote statewide adoption and sustainability through interagency collaboration.
 
 
-#embedded instriuction
-ei:
+#Our Journey
+journey:
     title: Join Us in Our Journey!
-    content: We invite educators, families, and stakeholders to join us in our journey towards a more inclusive and supportive educational system. Together, we can make a difference and create a brighter future for children with disabilities in California. Explore our website to learn more about our initiatives, resources, and how you can get involved. Let's work together to empower every child to shine!
+    content: Our vision is a world where every child, of every ability, has the opportunity to thrive in a supportive and nurturing educational environment. 
     button:
-      enable: true
+      enable: false
       label: Join Us in Our Journey!
       link: /contact
 
 primary:
     content: The primary objective of this project is to enhance the outcomes for young children with disabilities or at risk for developmental delays. This will be achieved through the improvement of personnel development systems in early intervention, early education, and transition services. Project funding runs 2023-2028, thanks to a State Personnel Development Grant (SPDG) within the Office of Special Education Programs (OSEP) under the Individuals with Disabilities Education Act (IDEA), Part D (Title 20, United States Code Section 1451–1455).
+  
+# invite
+invite: 
+  title: "We invite"
+  content: We invite educators, families, and stakeholders to join us in our journey. Together, we can make a difference and create a brighter future for children with disabilities in California. 
+  image: "/images/GettyImages-920503140.jpg"
+  description: ""
+
+# call_to_action
+call_to_action:
+  title: Meet the team!
+  content: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+  image: '/images/GTG-GettyImage.jpg'
+  button:
+    enable: true
+    label: "Explore our website to learn more"
+    link: "/staff"
 
 # feature
 feature: 
@@ -88,19 +106,5 @@ services:
       
    
 
-# workflow
-workflow: 
-  title: "Practice-based Coaching"
-  image: "/images/reading.jpg"
-  description: ""
 
-# call_to_action
-call_to_action:
-  title: Meet the team!
-  content: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-  image: '/images/GTG-GettyImage.jpg'
-  button:
-    enable: true
-    label: "Get Involved"
-    link: "/staff"
 ---
