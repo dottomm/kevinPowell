@@ -41,7 +41,7 @@
     margin: 0;
     font-family: system-ui;
     font-weight: var(--fw-500);
-    font-size: 1.125rem;
+    font-size: 1.185rem;
     line-height: 1.7;
     color: white;
     background-color: var(--clr-babyBlue);
@@ -335,6 +335,7 @@
     background-color:var(--clr-white);
 }
 .footer-text {
+  font-size: 1.025rem;
   padding-left: 2em;
   padding-right: 2em;
 color:var(--clr-primary);
