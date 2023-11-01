@@ -30,7 +30,7 @@ primary:
 invite: 
   title: "We invite"
   content: We invite educators, families, and stakeholders to join us in our journey. Together, we can make a difference and create a brighter future for children with disabilities in California. 
-  image: "/images/GettyImages-920503140.jpg"
+  image: "/images/GettyImages-920503140.webp"
   description: ""
 
 # call_to_action
