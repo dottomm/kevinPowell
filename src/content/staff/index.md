@@ -51,7 +51,7 @@ staff:
   
   - name: Ryan Herrera
     title: Administrator Assistant
-    image: 'images/CDEBadge.png'
+    image: 'images/ryan.webp'
 
 
   - name: Tom Tranfaglia
