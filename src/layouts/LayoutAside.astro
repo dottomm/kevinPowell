@@ -1,4 +1,11 @@
 --- 
+
+import Navigation from '../components/Navigation.astro';
+interface Props {
+	title: string;
+}
+
+
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/Footer.astro'
 import Navigation from '../components/Navigation.astro';
@@ -21,21 +28,46 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		
-		<ViewTransitions />
 	</head>
-	
 	<body>
-		
 			<Navigation />
-		 
-		 <div class="logoHeader">
-			<a href="/index.html"><img src="/images/small-pepti_logo_with_tagline.webp" width="88%" height="88%" alt="Partnerships for Effective Practices in Transition and Inclusion "></a>
-			<p>One System, All Children - Better Together</p>
-		 </div>
-		<slot />
+    <div class="content">
+		<div class="layout-container">
+			<main>
+			<slot />    
+		</main>
 		
-		<Footer />
+		<aside>
+			
+			<slot name='sideslot'>
+				
+			
+		  </aside>
+		</div>
+	</div>
 	</body>
-
 </html>
+
+<style>
+
+.layout-container {
+    
+    display: grid;
+    grid-template-columns: auto 15%;
+    /*grid-template-columns: auto 300px;*/
+    grid-column-gap: 12px;
+ }
+  
+main {
+        background-color: var(--AliceBlue);
+    flex: 3;
+    box-shadow: 10px 10px 25px rgb(218, 215, 215);
+}
+aside {
+    flex: 1;
+    overflow: display;
+	
+    }
+
+</style>
 
