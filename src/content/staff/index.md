@@ -52,7 +52,7 @@ staff:
   - name: Ryan Herrera
     title: Administrator Assistant
     image: 'images/ryan.webp'
-
+    bio:
 
 
 implementation:
