@@ -54,11 +54,6 @@ staff:
     image: 'images/ryan.webp'
 
 
-  - name: Tom Tranfaglia
-    title: Technolgy Coordinator
-    image: '/images/tom.webp'
-    bio: 
-
 
 implementation:
   title: Statewide Implementation Team
